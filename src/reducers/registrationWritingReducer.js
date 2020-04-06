@@ -1,0 +1,33 @@
+import { ActionEvent, getActionSuccess } from 'actions/actionEvent';
+import {initialState} from './index'
+import { ErrorCode } from 'config/errorCode';
+
+export default function (state = initialState, action) {
+    switch (action.type) { 
+        case ActionEvent.REGISTER_WRITING:
+            return {   
+                isLoading: true,
+                error: null,
+                errorCode: ErrorCode.ERROR_INIT,
+                data: null,
+                action: action.type
+            }
+        case getActionSuccess(ActionEvent.REGISTRATION_WRITING):
+            console.log(action);
+            return {
+                ...state,
+                isLoading: false,
+                data: action.payload.data.data !== undefined ? action.payload.data.data : null,
+                errorCode: action.payload.data.errorCode,
+                action: action.type,
+            }
+        case ActionEvent.RESET_DATA:{
+            return{
+                data: null,
+                action: action.type
+            }
+        }
+        default:
+            return state;
+    }
+}
