@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Chợ Phú Quốc</string>
+    <string name="default_notification_channel_id" translatable="false">aaChannelId</string>
+    <string name="title_activity_event_notification">ActivityEventNotification</string>
+
+    <!-- Payoo realse-->
+    <!-- <string name="payoo_merchant_id" translatable="false">1660</string>
+    <string name="payoo_protocol_scheme" translatable="false">payoosdk1660</string>
+    <string name="payoo_secret_key" translatable="false">7ce73257cd12f316c483ab3092796a15</string> -->
+
+    <!-- Payoo debug-->
+    <string name="payoo_merchant_id" translatable="false">862</string>
+    <string name="payoo_protocol_scheme" translatable="false">payoosdk862</string>
+    <string name="payoo_secret_key" translatable="false">2de1d5c9685c27fdd64d605d87b47855</string>
+    <string name="processing_payment">Processing payment</string>
+</resources>

@@ -1,0 +1,88 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+#project '/Volumes/Data/Project/411-mobile/ios/ielts.xcodeproj'
+#use_modular_headers!
+target 'ielts' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  #  use_frameworks!
+  node_modules_path = '../node_modules'
+  
+  pod 'React', subspecs: [
+  'Core',
+  'RCTText',
+  'RCTImage',
+  'RCTLinkingIOS',
+  'RCTSettings',
+  'RCTVibration',
+  'RCTGeolocation',
+  'RCTActionSheet',
+  'RCTNetwork',
+  'RCTWebSocket'
+  ], path: '../node_modules/react-native'
+  
+  pod 'yoga', path: "../node_modules/react-native/ReactCommon/yoga/yoga.podspec"
+  pod 'React', path: "../node_modules/react-native", :subspecs => ['DevSupport', 'RCTNetwork']
+  
+  #    pod 'RNStringee', path: "#{node_modules_path}/stringee-react-native/ios"
+  #    pod 'Stringee'
+  pod 'Google/SignIn'
+  #    pod 'RNImageCropPicker', :path => '../node_modules/react-native-image-crop-picker'
+  pod 'RSKImageCropper'
+  pod 'QBImagePickerController'
+  pod 'Bolts'
+  pod 'GoogleSignIn'
+  #pod 'RNGoogleSignin', :path => '../node_modules/react-native-google-signin'
+  pod 'Firebase', '~> 5.2.0'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'    #pod 'FirebaseAnalytics', '5.2.0'
+  pod 'Fabric', '~> 1.7.11'
+  pod 'Crashlytics', '~> 3.10.7'
+  pod 'FBSDKCoreKit', '4.38.0'
+  pod 'FBSDKShareKit', '4.38.0'
+  pod 'FBSDKLoginKit', '4.38.0'
+  pod 'react-native-fast-image', :path => '../node_modules/react-native-fast-image'
+  pod 'react-native-version-number', :path => '../node_modules/react-native-version-number'
+  
+  pod 'RNShare', :path => '../node_modules/react-native-share'
+  
+  pod 'react-native-background-upload', :path => '../node_modules/react-native-background-upload'
+  pod 'react-native-video', :path => '../node_modules/react-native-video'
+  pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
+  pod 'SinchRTC'
+  #pod 'react-native-youtube', :path => '../node_modules/react-native-youtube'
+  #pod 'Toast'
+  #Chart wrapper
+  #pod 'SwiftyJSON', '3.1.4'
+  #pod 'Charts', '3.2.1'
+  pod 'react-native-maps', :path => '../node_modules/react-native-maps'
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+  pod 'GoogleMaps'
+  pod 'react-native-geocoder', :path => '../node_modules/react-native-geocoder'
+  pod 'pop', :git => 'https://github.com/facebook/pop.git', :commit => 'b4ff2db'
+  pod 'IQKeyboardManager'
+  pod 'ReactNativeKeyboardManager', :path => '../node_modules/react-native-keyboard-manager'
+  
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+  
+end
+
+#swift4 = ['Charts']
+post_install do |installer|
+  installer.pods_project.build_configuration_list.build_configurations.each do |configuration|
+    configuration.build_settings['CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES'] = 'YES'
+    configuration.build_settings['ENABLE_BITCODE'] = 'NO'
+  end
+  installer.pods_project.targets.each do |target|
+    if target.name == "React"
+      target.remove_from_project
+    end
+    #        target.build_configurations.each do |config|
+    #            config.build_settings['SWIFT_VERSION'] = '4.2'
+    #        end
+  end
+  
+end

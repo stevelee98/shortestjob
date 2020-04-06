@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1086457849282",
+    "firebase_url": "https://chophuquoc-production-quanghd.firebaseio.com",
+    "project_id": "chophuquoc-production-quanghd",
+    "storage_bucket": "chophuquoc-production-quanghd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086457849282:android:f011b74d662258eab5e25b",
+        "android_client_info": {
+          "package_name": "com.boot.market"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086457849282-hu6tsabfvq8l6r10ni6ffmmtfkb0grqp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbIehHJoH1NKss_ki79EYwnKcfRVHFn5w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086457849282-hu6tsabfvq8l6r10ni6ffmmtfkb0grqp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
