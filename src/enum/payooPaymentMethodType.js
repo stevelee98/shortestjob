@@ -1,0 +1,7 @@
+export default PayooPaymentMethodType = {
+    E_WALLET: 1,
+	INTERNAL_CARD: 2,
+	INTERNATIONAL_CARD_VN: 3,
+	INTERNATIONAL_CARD_OVERSEA: 4,
+	STORE: 5
+}

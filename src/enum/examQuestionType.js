@@ -1,0 +1,9 @@
+export default ExamQuestionType = {
+    GENERAL_TRAINING: 1,
+    ACADEMIC: 2,
+    FROM_PACKAGE_VIEW: 3,
+    FROM_USER_PROFILE: 4,
+    FROM_TESTING_HISTORY: 5,
+    FROM_CONFIRM_WRITING: 6,
+    FROM_REGISTER_TESTING: 7
+}
